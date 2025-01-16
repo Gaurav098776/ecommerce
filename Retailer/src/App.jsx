@@ -6,6 +6,11 @@ import NotFound from "./pages/NotFound";
 import SignUp from "./pages/SignUp";
 import RetailerDashboard from "./pages/RetailerDashboard";
 import ProtectedRoute from "./pages/ProtectedRoute";
+import Retailer from "./pages/Retailer";
+import RetailerHome from "./pages/RetailerHome";
+import Product from "./pages/Product";
+import Banking from "./pages/Banking";
+import Order from "./pages/Order";
 
 const router = createBrowserRouter([
   {
@@ -16,19 +21,42 @@ const router = createBrowserRouter([
     path: "/signup",
     element : <SignUp/>
   },
+  // {
+  //   path: "/retailerdashboard",
+  //   element:  <ProtectedRoute> <RetailerDashboard/> </ProtectedRoute> , 
+  //   children: [
+  //     // {
+  //     //   index: true,
+  //     //   element: ,
+  //     // },
+  //     // {
+  //     //   path: "retailer",
+  //     //   element: <Retailer />,
+  //     // }
+  //   ],
+  // },
   {
-    path: "/retailerdashboard",
-    element:  <ProtectedRoute> <RetailerDashboard/> </ProtectedRoute> , 
-    children: [
-      // {
-      //   index: true,
-      //   element: ,
-      // },
-      // {
-      //   path: "category",
-      //   element: <Category />,
-      // }
-    ],
+    path: "/retailer",
+    element: <ProtectedRoute><Retailer /></ProtectedRoute>,
+    children : [
+      {
+        index : true,
+        element : <RetailerHome/>
+      },
+      {
+        path: "product",
+        element : <Product/>
+      },
+      {
+        path: "banking",
+        element : <Banking/>
+      },
+      {
+        path: "order",
+        element : <Order/>
+      },
+      
+    ]
   },
   
   {

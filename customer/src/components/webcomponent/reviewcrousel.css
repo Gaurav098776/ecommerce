@@ -1,0 +1,10 @@
+body {
+  background: rgb(216, 202, 202);
+  padding-top: 2rem;
+}
+
+.card-img-top {
+  width: 100%;
+  border-top-left-radius: calc(.25rem - 1px);
+border-top-right-radius: calc(.25rem - 1px);
+}

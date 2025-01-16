@@ -11,7 +11,7 @@ const Sidebar = () => {
 
         {/* Navigation Links */}
         <nav className="space-y-2">
-          <Link to="/dashboard/orders">
+          <Link to="retailer">
             <Button className="w-full text-left" variant="ghost">
               Orders
             </Button>

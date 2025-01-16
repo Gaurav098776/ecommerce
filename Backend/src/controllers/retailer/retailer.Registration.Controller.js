@@ -228,7 +228,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
         status: user.status,
       },
       process.env.JWT_SECRET,
-      { expiresIn: "1h" }
+      { expiresIn: "1d" }
     );
 
     // Optional: Create a new refresh token and update it in the database

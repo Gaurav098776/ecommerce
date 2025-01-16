@@ -27,6 +27,8 @@ import protectedRoute from './routes/protected.Routes.js'
 
 //retailer route
 import retailerRouter from './routes/retailer.Route.js'
+import retailerProductRouter from './routes/retailerProduct.js'
+import retailerBank from './routes/retailerBank.Route.js'
 
 //routes declaration 
 app.use("/api/v1/users",userRouter)
@@ -36,6 +38,8 @@ app.use("/api/v1/rolesAssign",roleAssignRouter)
 app.use("/api/v1/subcategory",subCategoryRouter)
 app.use("/api/v1/protected",protectedRoute)
 app.use("/api/v1/retailer",retailerRouter)
+app.use("/api/v1/retailerProduct",retailerProductRouter)
+app.use("/api/v1/retailerbank",retailerBank)
 
 
 

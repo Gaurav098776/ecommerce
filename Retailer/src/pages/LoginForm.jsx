@@ -21,7 +21,7 @@ const LoginForm = () => {
 
   useEffect(() => {
     if (user && user.email === data.email) {
-      navigate("/retailerdashboard");
+      navigate("/retailer");
     }
   }, [user, data.email, navigate]);
 

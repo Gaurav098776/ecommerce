@@ -21,7 +21,7 @@ export const loginRetailer = createAsyncThunk("loginRetailer", async (data, { re
       // console.log('loginData', response.data.data);
       
       //dispatch reducs for set the user data in slice 
-      return { token, user };
+      return { token,user };
     } else {
       return rejectWithValue("Error submitting data.");
     }
@@ -40,7 +40,7 @@ export const checkAuth = createAsyncThunk(
         { withCredentials: true }
       );
       const user = response.data.data;
-      console.log(user.role);
+      
       
       console.log("Check Auth User:", user); // Check the user object in the console
 
